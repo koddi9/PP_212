@@ -7,10 +7,10 @@ public class App {
                 new AnnotationConfigApplicationContext(AppConfig.class);
         HelloWorld bean1 = (HelloWorld) applicationContext.getBean("helloworld");
         HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld");
-        System.out.println(bean1==bean2);
+        System.out.println("HelloWorlds reference equals: " + (bean1==bean2));
         Cat cat1 = (Cat) applicationContext.getBean("cat");
         Cat cat2 = (Cat) applicationContext.getBean("cat");
-        System.out.println(cat1==cat2);
+        System.out.println("Cats reference equals: " + (cat1==cat2));
     }
 
 }
